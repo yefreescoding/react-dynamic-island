@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap");
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  align-items: center;
+  padding: 5%;
+  height: 100dvh;
+}
+main .card {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: 1fr 2fr;
+  gap: 1em;
+  width: 100%;
+  height: 80%;
+  background-color: white;
+}
+main .card__img {
+  background-image: url(../../images/hero2.png);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+main .card__img span {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  letter-spacing: 3px;
+  font-family: "Gambarino", serif;
+  font-weight: bold;
+  font-size: 4.5em;
+  /*color: rgb(200, 0, 0);*/
+  color: hsl(210, 46%, 95%);
+}
+main .card__info {
+  padding: 3%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+main .card__info__text {
+  font-family: "Manrope", sans-serif;
+  padding: 3%;
+}
+main .card__info__text h2 {
+  font-size: 1.5em;
+  line-height: 30px;
+  color: hsl(217, 19%, 35%);
+}
+main .card__info__text p {
+  color: hsl(212, 23%, 69%);
+  margin-top: 1em;
+  font-size: 1.4em;
+  line-height: 25px;
+}
+main .card__info__user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .card__info .profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+main .card__info .profile__img {
+  width: auto;
+}
+main .card__info .profile__img img {
+  width: 50px;
+  border-radius: 50%;
+}
+main .card__info .profile__data {
+  display: flex;
+  flex-flow: column;
+  font-family: "Manrope", sans-serif;
+  font-weight: bold;
+}
+main .card__info .profile__data .name {
+  color: hsl(217, 19%, 35%);
+}
+main .card__info .profile__data .date {
+  color: hsl(214, 17%, 51%);
+}
+main .card__info .share img {
+  width: 20px;
+}
+
+@media (min-width: 36em) {
+  main .card {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    width: 90%;
+    height: 80%;
+  }
+  main .card__img span {
+    font-size: 6em;
+  }
+  main .card__info__text h2 {
+    font-size: 2.5em;
+    line-height: 45px;
+  }
+  main .card__info__text p {
+    font-size: 2em;
+    line-height: 35px;
+  }
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /*
+  border: 1px blue solid;
+  */
+}
+
+body {
+  background-color: hsl(210, 46%, 95%);
+}
+
+html {
+  font-size: 80%;
+}
+
+@media (min-width: 36em) {
+  html {
+    font-size: 95%;
+  }
+}/*# sourceMappingURL=styles.css.map */

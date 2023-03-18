@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap');
+
+$VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+$DesaturatedDarkBlue: hsl(214, 17%, 51%);
+$GrayishBlue: hsl(212, 23%, 69%);
+$LightGrayishBlue: hsl(210, 46%, 95%);
+
+$fontPrincipal: 'Manrope', sans-serif;
+$fontGambarino: 'Gambarino', serif;
+$fontLora: 'Lora', serif;
+
+
+main {
+  display: grid;
+  place-items: center;
+  align-items: center;
+
+  padding: 5%;
+
+  height: 100dvh;
+
+  .card {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows: 1fr 2fr;
+    gap: 1em;
+
+    
+
+    width: 100%;
+    height: 80%;
+
+    background-color: white;
+
+    &__img {
+      background-image: url(../../images/hero2.png);
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+
+      position: relative;
+
+      span {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        text-align: center;
+        letter-spacing: 3px;
+
+        font-family: $fontGambarino;
+        font-weight: bold;
+        font-size: 4.5em;
+        /*color: rgb(200, 0, 0);*/
+        color: $LightGrayishBlue;
+      }
+    } 
+
+    &__info {
+      padding: 3%;
+
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+
+      &__text {
+        font-family: $fontPrincipal;
+        padding: 3%;
+
+        h2 {
+          font-size: 1.5em;
+          line-height: 30px;
+          color: $VeryDarkGrayishBlue;
+        }
+
+        p {
+          color: $GrayishBlue;
+          margin-top: 1em;
+          font-size: 1.4em;
+          line-height: 25px;
+        }
+      }
+
+      &__user {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .profile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+
+        &__img {
+          width: auto;
+          img {
+            width: 50px;
+            border-radius: 50%;
+          }
+        }
+
+        &__data {
+          display: flex;
+          flex-flow: column;
+          font-family: $fontPrincipal;
+          font-weight: bold;
+
+          .name {
+            color: $VeryDarkGrayishBlue;
+          }
+
+          .date {
+            color: $DesaturatedDarkBlue;
+          }
+        }
+      }
+
+      .share {
+        img {
+          width: 20px;
+        }
+      }
+    }
+
+
+
+  }
+
+
+}
+
+@media (min-width:36em) {
+  main {
+
+    .card {
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 1fr;
+  
+      width: 90%;
+      height: 80%;
+  
+      &__img {
+  
+        span {
+          font-size: 6em;
+        }
+      } 
+  
+      &__info {
+  
+        &__text {
+        
+          h2 {
+            font-size: 2.5em;
+            line-height: 45px;
+          }
+  
+          p {
+           font-size: 2em;
+           line-height: 35px;
+          }
+        }
+  
+        &__user {
+       
+        }
+      }
+    }
+  }
+}
