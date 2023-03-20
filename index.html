@@ -59,17 +59,45 @@
             </div>
           </div>
           <div class="share">
-            <img src="images/icon-share.svg" alt="share icon">
+            <button id="btn" class="btn">
+              <img src="images/icon-share.svg" alt="share icon">
+            </button> 
           </div>
+        </div>
+        <div class="share-popUp" data-visible="false">
+            <div class="socials">
+              <span>SHARE</span>
+              <img src="images/icon-facebook.svg" alt="Facebook Logo">
+              <img src="images/icon-twitter.svg" alt="Twitter Logo">
+              <img src="images/icon-pinterest.svg" alt="Github Logo">
+            </div>
+            <div class="share">
+            </div>
         </div>
       </div>
     </div>
   </main>
   
-  <footer></footer>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Yefree De Los Santos</a>.
-  </div>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Yefree De Los Santos</a>.
+    </div>
+  </footer>
+ 
+  <script>
+    const popUpShare = document.querySelector(".share-popUp");
+    const shareToggle = document.querySelector(".btn");
+
+    shareToggle.addEventListener("click", () => {
+      const visibility = popUpShare.getAttribute('data-visible');
+
+      if (visibility === "false") {
+        popUpShare.setAttribute("data-visible", true);
+      } else {
+        popUpShare.setAttribute("data-visible", false);
+      }
+    })
+  </script>
 </body>
 </html>
