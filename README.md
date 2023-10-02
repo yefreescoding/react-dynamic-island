@@ -1,27 +1,83 @@
-# React + TypeScript + Vite
+# IOS DYNAMIC ISLAND REACT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a challenge I decided to start working in, and transform it into a React component.
 
-Currently, two official plugins are available:
+## Table of contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-## Expanding the ESLint configuration
+## Overview
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### The challenge
 
-- Configure the top-level `parserOptions` property like this:
+Take the functionality, animations, and "magic" of the iPhone 13 Pro, and iPhone 15 series dynamic island and translate it into the web with JavaScript.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+### The original reference
+
+Normal state:
+![](./screenshot.jpg)
+
+Medium Expanded State:
+![](./screenshot.jpg)
+
+Big Expanded State:
+![](./screenshot.jpg)
+
+### Links
+
+- Solution URL: [GitHub](https://your-solution-url.com)
+- Live Site URL: [Live Site](https://your-live-site-url.com)
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- SASS
+- [React](https://reactjs.org/) - JS library
+
+### What I learned
+
+✏️ Notes
+
+```html
+<h1>Some HTML code I'm proud of</h1>
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+```css
+.proud-of-this-css {
+  color: papayawhip;
+}
+```
+
+```js
+const proudOfThisFunc = () => {
+  console.log("🎉");
+};
+```
+
+### Continued development
+
+### Useful resources
+
+- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+
+## Author
+
+- Website - [Yefree](https://www.your-site.com)
+
+- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+
+## Acknowledgments
