@@ -2,73 +2,66 @@
   position: sticky;
   top: 1rem;
   z-index: 9999;
+  width: min(100%, 40em);
+  margin-inline: auto;
 }
 
 .island {
+  width: fit-content;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  width: min(100%, 40em);
+  overflow: hidden;
+  padding: 0 1rem;
   margin: 1rem auto;
   border-radius: 3rem;
+  box-shadow: 0 0 1rem var(--accent);
+  border: 1px solid var(--accent);
+  background-color: var(--background);
+  transition: all 350ms ease;
+
+  &:active {
+    transform: scale(1.05, 1.05);
+  }
 
   &__btn {
+    position: relative;
+    // display: none;
+    transform: translateX(100%);
     border-radius: 50%;
     aspect-ratio: 1;
     border: transparent 1px solid;
     padding: 0.5rem;
-    box-shadow: 0 0 6px var(--accent);
     background-color: var(--background);
-    cursor: pointer;
+    width: 0;
+    visibility: hidden;
+    transition: all 350ms ease-in-out;
   }
 
+  &:hover &__btn {
+    width: 3rem;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav {
+    flex-basis: clamp(15em, 20vw, 40em);
+  }
   &__nav_ul {
-    display: flex;
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    box-shadow: 0 0 6px var(--accent);
-    border-radius: 3rem;
-    background-color: var(--background);
-    display: none;
+    display: flex;
     overflow: hidden;
     transition: all 500ms ease-in-out;
+    color: var(--text);
+    // width: 0;
 
-    &[aria-expanded="true"] {
-      -webkit-animation: scale-up-hor-center 0.4s
-        cubic-bezier(0.39, 0.575, 0.565, 1) both;
-      animation: scale-up-hor-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
-        both;
-      visibility: visible;
-      display: flex;
+    &:hover {
+      // width: 100%;
+      // color: var(--text);
     }
-  }
-}
-
-// Animations
-
-.scale-up-hor-center {
-}
-
-@-webkit-keyframes scale-up-hor-center {
-  0% {
-    -webkit-transform: scaleX(0.4);
-    transform: scaleX(0.4);
-  }
-  100% {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-  }
-}
-@keyframes scale-up-hor-center {
-  0% {
-    -webkit-transform: scaleX(0.4);
-    transform: scaleX(0.4);
-  }
-  100% {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
   }
 }

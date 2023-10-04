@@ -1,23 +1,16 @@
 :root {
-  --text: #050316;
-  --background: #fbfbfe;
-  --primary: #8063e7;
-  --secondary: #dddbff;
-  --accent: #bb3dff;
-  @media (prefers-color-scheme: dark) {
-    --text: #eae9fc;
-    --background: #010104;
-    --primary: hsl(253, 87%, 86%);
-    --secondary: hsl(243, 74%, 60%);
-    --accent: #7e00c2;
-  }
+  --text: #eae9fc;
+  --background: #010104;
+  --primary: hsl(253, 87%, 86%);
+  --secondary: hsl(243, 74%, 60%);
+  --accent: #7e00c2;
 }
 
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
-  color-scheme: dark light;
+  // color-scheme: dark light;
 }
 /*
   Typographic tweaks!
@@ -63,6 +56,11 @@ ul {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
 }
 /* 
 text-wrap: balance;

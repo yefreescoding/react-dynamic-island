@@ -10,14 +10,23 @@ export default function DynamicIsland() {
   };
   return (
     <header className="header">
-      <div className="island">
-        <button type="button" className="island__btn" onClick={handleOpenMenu}>
+      <div
+        className="island"
+        aria-label="Dynamic island"
+        aria-expanded={openMenu}
+      >
+        <button
+          type="button"
+          className="island__btn"
+          onClick={handleOpenMenu}
+          aria-expanded={openMenu}
+        >
           click
         </button>
         <nav className="island__nav">
-          <ul className="island__nav_ul" aria-expanded={openMenu}>
+          <ul className="island__nav_ul">
             <li>
-              <a href="">Example 1</a>
+              <a href="#store">Example 1</a>
             </li>
             <li>
               <a href="">Example 2</a>
