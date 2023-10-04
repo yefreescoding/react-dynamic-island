@@ -1,41 +1,23 @@
 // import styles
-import { useState } from "react";
 import "./dynamicIsland.scss";
 
 export default function DynamicIsland() {
-  const [openMenu, setOpenMenu] = useState(false);
-
-  const handleOpenMenu = () => {
-    setOpenMenu(!openMenu);
-  };
   return (
     <header className="header">
-      <div
-        className="island"
-        aria-label="Dynamic island"
-        aria-expanded={openMenu}
-      >
-        <button
-          type="button"
-          className="island__btn"
-          onClick={handleOpenMenu}
-          aria-expanded={openMenu}
-        >
-          click
-        </button>
+      <div className="island" aria-label="Dynamic island">
         <nav className="island__nav">
           <ul className="island__nav_ul">
             <li>
-              <a href="#store">Example 1</a>
+              <button>state 1</button>
             </li>
             <li>
-              <a href="">Example 2</a>
+              <button>state 2</button>
             </li>
             <li>
-              <a href="">Example 3</a>
+              <button>state 3</button>
             </li>
             <li>
-              <a href="">Example 4</a>
+              <button>state 4</button>
             </li>
           </ul>
         </nav>
