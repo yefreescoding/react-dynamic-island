@@ -1,13 +1,13 @@
 .header {
   position: sticky;
-  top: 1rem;
+  top: 0.5rem;
   z-index: 9999;
-  width: min(100%, 40em);
   margin-inline: auto;
 }
 
 .island {
-  width: fit-content;
+  width: min(100%, 30em);
+  height: 3.5em;
   position: relative;
   display: flex;
   align-items: center;
@@ -26,35 +26,48 @@
     transform: scale(1.05, 1.05);
   }
 
-  &__btn {
-    position: relative;
-    // display: none;
-    transform: translateX(100%);
-    border-radius: 50%;
-    aspect-ratio: 1;
-    border: transparent 1px solid;
-    padding: 0.5rem;
-    background-color: var(--background);
-    width: 0;
-    visibility: hidden;
-    transition: all 350ms ease-in-out;
-  }
-
-  &:hover &__btn {
-    width: 3rem;
-    visibility: visible;
-    transform: translateX(0);
-  }
-
   .nav {
     flex-basis: clamp(15em, 20vw, 40em);
   }
   &__nav_ul {
+    overflow: hidden;
+    display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1rem;
     padding: 1rem;
-    display: flex;
-    overflow: hidden;
     transition: all 500ms ease-in-out;
+
+    button {
+      border-radius: 50%;
+      border: transparent 1px solid;
+      padding: 0.2rem;
+      background-color: var(--background);
+    }
   }
+}
+
+// State styles
+.island[data-mode="expanded"] {
+  width: min(100%, 40em);
+  transition: all 350ms ease;
+}
+
+.island[data-mode="divide"] {
+  width: min(100%, 40em);
+  transition: all 350ms ease;
+}
+
+.island[data-mode="large"] {
+  width: min(100%, 40em);
+  height: 30em;
+  aspect-ratio: 9/6;
+  transition: all 350ms ease;
+}
+
+.island[data-mode="square"] {
+  width: min(100%, 20em);
+  height: 20em;
+  aspect-ratio: 4/4;
+  transition: all 350ms ease;
 }
