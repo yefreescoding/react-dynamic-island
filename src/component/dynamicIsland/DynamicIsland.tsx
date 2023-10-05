@@ -2,7 +2,7 @@ import { useState } from "react";
 // import styles
 import "./dynamicIsland.scss";
 
-// import add from "../../assets/add.svg";
+import Add from "../icons/icons";
 
 export default function DynamicIsland() {
   const [dataMode, setDataMode] = useState<string | null>(null);
@@ -15,6 +15,11 @@ export default function DynamicIsland() {
   return (
     <header className="header">
       <div className="island" aria-label="Dynamic island" data-mode={dataMode}>
+        {dataMode === "expanded" && (
+          <div className="expanded_items">
+            <Add />
+          </div>
+        )}
         <nav className="island__nav">
           <ul className="island__nav_ul">
             <li>
@@ -48,6 +53,11 @@ export default function DynamicIsland() {
             </li>
           </ul>
         </nav>
+        {dataMode === "expanded" && (
+          <div className="expanded_items">
+            <Add />
+          </div>
+        )}
       </div>
     </header>
   );

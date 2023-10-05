@@ -20,6 +20,7 @@
   box-shadow: 0 0 1rem var(--accent);
   border: 1px solid var(--accent);
   background-color: var(--background);
+  color: var(--text);
   transition: all 350ms ease;
 
   &:active {
@@ -45,12 +46,22 @@
       background-color: var(--background);
     }
   }
+
+  .expanded_items {
+    visibility: hidden;
+    transition: all 400ms;
+    transform: translateX(100%);
+  }
 }
 
 // State styles
 .island[data-mode="expanded"] {
   width: min(100%, 40em);
-  transition: all 350ms ease;
+  transition: all 300ms ease;
+  .expanded_items {
+    visibility: visible;
+    transform: translateX(100%);
+  }
 }
 
 .island[data-mode="divide"] {
