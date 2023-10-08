@@ -1,4 +1,5 @@
 import Card from "./Cards";
+import InputEmail from "./InputEmail";
 
 export default function Body() {
   return (
@@ -18,8 +19,7 @@ export default function Body() {
         </div>
         <form className="cover__email" action="">
           <div>
-            <input type="text" placeholder="" />
-            <button type="submit">Let's connect</button>
+            <InputEmail />
           </div>
           <p>No spam, I promise.</p>
         </form>

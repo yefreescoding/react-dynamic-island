@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./dynamicIsland.scss";
 
-import Add from "../icons/icons";
+import { Add, Phone } from "../icons/icons";
+import SquareMenu from "../SquareMenu";
 
 export default function DynamicIsland() {
   const [dataMode, setDataMode] = useState<string | null>(null);
@@ -42,18 +43,24 @@ export default function DynamicIsland() {
         </li>
       </ul>
       <div className="island" aria-label="Dynamic island" data-mode={dataMode}>
-        <div className="expanded_items">
-          <Add />
+        <div className="expanded_container" data-mode="expanded">
+          <div className="expanded_items">
+            <Phone />
+          </div>
+          <nav className="island__nav">
+            <span className="island__nav_ul">Dynamic Island</span>
+            {/* <ul className="island__nav_ul">
+              <li>Link 1</li>
+              <li>Link 2</li>
+              <li>Link 3</li>
+            </ul> */}
+          </nav>
+          <div className="expanded_items">
+            <Add />
+          </div>
         </div>
-        <nav className="island__nav">
-          <ul className="island__nav_ul">
-            <li>Link 1</li>
-            <li>Link 2</li>
-            <li>Link 3</li>
-          </ul>
-        </nav>
-        <div className="expanded_items">
-          <Add />
+        <div className="island__container" data-mode={dataMode}>
+          {dataMode === "square" && <SquareMenu />}
         </div>
       </div>
     </header>
