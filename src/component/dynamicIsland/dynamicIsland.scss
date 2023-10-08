@@ -104,6 +104,9 @@ $transition_duration: 300ms;
   height: 30em;
   aspect-ratio: 9/6;
   transition: all 350ms ease;
+  .island__container {
+    display: block;
+  }
 }
 
 .island[data-mode="square"] {
