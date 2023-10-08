@@ -1,6 +1,6 @@
 import DynamicIsland from "./component/dynamicIsland/DynamicIsland";
 import Body from "./component/Body";
-import "./App.scss";
+import "./app.scss";
 
 function App() {
   return (
