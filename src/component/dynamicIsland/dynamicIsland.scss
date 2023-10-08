@@ -1,13 +1,18 @@
+$transition_duration: 300ms;
+
 .header {
-  position: sticky;
-  top: 0.5rem;
+  position: fixed;
+  inset: 0.5rem 0 auto 0;
   z-index: 9999;
   margin-inline: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .island {
-  width: min(100%, 30em);
-  height: 3.5em;
+  // width: min(100%, 30em);
+  width: fit-content;
+  height: min(3.5rem, 5em);
   position: relative;
   display: flex;
   align-items: center;
@@ -21,46 +26,69 @@
   border: 1px solid var(--accent);
   background-color: var(--background);
   color: var(--text);
-  transition: all 350ms ease;
+  transition: all $transition_duration ease;
 
   &:active {
     transform: scale(1.05, 1.05);
   }
 
   .nav {
-    flex-basis: clamp(15em, 20vw, 40em);
+    flex: 2;
   }
+
   &__nav_ul {
-    overflow: hidden;
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    overflow: hidden;
     padding: 1rem;
     transition: all 500ms ease-in-out;
 
     button {
+      text-transform: uppercase;
       border-radius: 50%;
       border: transparent 1px solid;
       padding: 0.2rem;
-      background-color: var(--background);
+      background-color: transparent;
+      text-align: center;
     }
   }
 
   .expanded_items {
+    // flex: 1;
+    position: absolute;
     visibility: hidden;
+    transition: all $transition_duration ease;
     transition: all 400ms;
-    transform: translateX(100%);
+    z-index: -1;
+    &:nth-child(1) {
+      transform: translateX(100%);
+      // background-color: lightblue;
+    }
+    &:nth-child(3) {
+      transform: translateX(-100%);
+    }
   }
 }
 
-// State styles
+// ======== State styles ========
 .island[data-mode="expanded"] {
-  width: min(100%, 40em);
-  transition: all 300ms ease;
+  // width: min(100%, 35em);
+  width: fit-content;
   .expanded_items {
+    transition: all calc($transition_duration - 100ms) ease;
+    position: relative;
     visibility: visible;
-    transform: translateX(100%);
+    transform: translateX(0);
+    z-index: 0;
+    &:nth-child(1) {
+      // color: violet;
+    }
+    &:nth-child(3) {
+      // color: red;
+    }
   }
 }
 
@@ -77,8 +105,8 @@
 }
 
 .island[data-mode="square"] {
-  width: min(100%, 20em);
-  height: 20em;
+  width: min(100%, 15em);
+  height: 15em;
   aspect-ratio: 4/4;
   transition: all 350ms ease;
 }
