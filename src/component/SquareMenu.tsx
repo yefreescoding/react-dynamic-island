@@ -1,6 +1,6 @@
 export default function SquareMenu() {
   return (
-    <div className="card">
+    <div className="square_card">
       <div className="background"></div>
       <div className="logo">
         <svg

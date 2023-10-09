@@ -3,6 +3,7 @@ import "./dynamicIsland.scss";
 
 import { Add, Phone } from "../icons/icons";
 import SquareMenu from "../SquareMenu";
+import LargeCard from "../LargeCard";
 
 export default function DynamicIsland() {
   const [dataMode, setDataMode] = useState<string | null>(null);
@@ -49,11 +50,6 @@ export default function DynamicIsland() {
           </div>
           <nav className="island__nav">
             <span className="island__nav_ul">Dynamic Island</span>
-            {/* <ul className="island__nav_ul">
-              <li>Link 1</li>
-              <li>Link 2</li>
-              <li>Link 3</li>
-            </ul> */}
           </nav>
           <div className="expanded_items">
             <Add />
@@ -61,6 +57,7 @@ export default function DynamicIsland() {
         </div>
         <div className="island__container" data-mode={dataMode}>
           {dataMode === "square" && <SquareMenu />}
+          {dataMode === "large" && <LargeCard />}
         </div>
       </div>
     </header>
