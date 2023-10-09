@@ -50,7 +50,7 @@
   .cover_img {
     position: relative;
     border-radius: 10px;
-    height: 50vh;
+    height: 50dvh;
 
     &::after,
     &::before {
@@ -476,44 +476,40 @@ input:hover {
 // Divide Component
 
 .ui-bookmark {
-  --icon-size: 20px;
+  --icon-size: 15px;
   --icon-secondary-color: rgb(228, 227, 227);
   --icon-hover-color: rgb(178, 178, 178);
   --icon-primary-color: gold;
   --icon-circle-border: 1px solid var(--icon-primary-color);
   --icon-circle-size: 35px;
   --icon-anmt-duration: 0.3s;
-  position: relative;
-}
 
-.ui-bookmark input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  display: none;
-}
+  & input {
+    -moz-appearance: none;
+    appearance: none;
+    display: none;
+  }
 
-.ui-bookmark .bookmark {
-  width: var(--icon-size);
-  height: auto;
-  fill: var(--icon-secondary-color);
-  cursor: pointer;
-  -webkit-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  -webkit-transform-origin: top;
-  -ms-transform-origin: top;
-  transform-origin: top;
+  & .bookmark {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    fill: var(--icon-secondary-color);
+    cursor: pointer;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    -ms-transform-origin: top;
+    transform-origin: top;
+  }
+
+  svg {
+    width: var(--icon-size);
+    height: var(--icon-size);
+  }
 }
 
 .bookmark::after {

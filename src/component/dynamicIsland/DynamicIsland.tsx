@@ -30,13 +30,13 @@ export default function DynamicIsland() {
           </button>
         </li>
         <li>
-          <button type="button" data-mode="square" onClick={handleDataMode}>
-            square
+          <button type="button" data-mode="divide" onClick={handleDataMode}>
+            divide
           </button>
         </li>
         <li>
-          <button type="button" data-mode="divide" onClick={handleDataMode}>
-            divide
+          <button type="button" data-mode="square" onClick={handleDataMode}>
+            square
           </button>
         </li>
         <li>
@@ -51,7 +51,7 @@ export default function DynamicIsland() {
             <Phone />
           </div>
           <nav className="island__nav">
-            <span className="island__nav_ul">Dynamic Island</span>
+            <span className="island_content">Dynamic Island</span>
           </nav>
           <div className="expanded_items">
             <Add />

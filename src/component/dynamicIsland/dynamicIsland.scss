@@ -10,14 +10,13 @@ $transition_duration: 300ms;
 }
 
 .island {
-  width: fit-content;
-  height: min(3.5rem, 5em);
+  width: min(6rem, fit-content);
+  height: min(3rem, 5em);
   position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  overflow: visible;
-  padding: 0 1rem;
+  gap: 1rem;
+  padding: 1rem;
   margin: 1rem auto;
   border-radius: 3rem;
   box-shadow: 0 0 0.5rem var(--secondary);
@@ -25,12 +24,6 @@ $transition_duration: 300ms;
   background-color: var(--background);
   color: var(--text);
   transition: all $transition_duration ease;
-
-  .expanded_container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 
   &:active {
     transform: scale(1.05, 1.05);
@@ -60,6 +53,13 @@ $transition_duration: 300ms;
     }
   }
 
+  .expanded_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
   .expanded_items {
     position: absolute;
     opacity: 0;
@@ -77,9 +77,12 @@ $transition_duration: 300ms;
     display: grid;
     place-items: center;
     padding: 1rem;
+    max-width: 5rem;
+    max-height: 5rem;
     border-radius: 50%;
     box-shadow: 0 0 0.5rem var(--secondary);
     border: 0.5px solid var(--accent);
+    background-color: var(--background);
     position: absolute;
     opacity: 0;
     transition: opacity 100ms, transform 400ms;
@@ -111,6 +114,7 @@ $transition_duration: 300ms;
 }
 
 .island[data-mode="large"] {
+  flex-direction: column;
   width: min(100%, 40em);
   height: 20em;
   aspect-ratio: 9/6;
@@ -121,6 +125,7 @@ $transition_duration: 300ms;
 }
 
 .island[data-mode="square"] {
+  flex-direction: column;
   width: min(100%, 18em);
   height: 18em;
   border-radius: 2rem;
