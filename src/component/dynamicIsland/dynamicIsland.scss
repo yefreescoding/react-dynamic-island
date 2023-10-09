@@ -16,7 +16,7 @@ $transition_duration: 300ms;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
+  overflow: visible;
   padding: 0 1rem;
   margin: 1rem auto;
   border-radius: 3rem;
@@ -30,7 +30,6 @@ $transition_duration: 300ms;
     display: flex;
     align-items: center;
     justify-content: center;
-    // width: fit-content;
   }
 
   &:active {
@@ -63,17 +62,27 @@ $transition_duration: 300ms;
 
   .expanded_items {
     position: absolute;
-    visibility: hidden;
-    transition: all $transition_duration ease;
-    transition: all 400ms;
+    opacity: 0;
+    transition: opacity 100ms, transform 400ms;
     z-index: -1;
     &:nth-child(1) {
       transform: translateX(100%);
-      // background-color: lightblue;
     }
     &:nth-child(3) {
       transform: translateX(-100%);
     }
+  }
+
+  .divide_component {
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    border-radius: 50%;
+    box-shadow: 0 0 0.5rem var(--secondary);
+    border: 0.5px solid var(--accent);
+    position: absolute;
+    opacity: 0;
+    transition: opacity 100ms, transform 400ms;
   }
 
   .island__container {
@@ -83,20 +92,22 @@ $transition_duration: 300ms;
 
 // ======== State styles ========
 .island[data-mode="expanded"] {
-  // width: min(100%, 35em);
   width: fit-content;
   .expanded_items {
     transition: all calc($transition_duration - 100ms) ease;
     position: relative;
-    visibility: visible;
+    opacity: 1;
     transform: translateX(0);
     z-index: 0;
   }
 }
 
 .island[data-mode="divide"] {
-  width: min(100%, 40em);
-  transition: all 350ms ease;
+  // transition: all 350ms ease;
+  .divide_component {
+    transform: translateX(8rem);
+    opacity: 1;
+  }
 }
 
 .island[data-mode="large"] {
@@ -106,8 +117,6 @@ $transition_duration: 300ms;
   transition: all 350ms ease;
   .island__container {
     display: block;
-    // width: 100%;
-    // height: 100%;
   }
 }
 

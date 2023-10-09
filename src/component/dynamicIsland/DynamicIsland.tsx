@@ -1,13 +1,15 @@
 import { useState } from "react";
+// styles imports
 import "./dynamicIsland.scss";
-
+// Icon imports
 import { Add, Phone } from "../icons/icons";
+// Component imports
 import SquareMenu from "../SquareMenu";
 import LargeCard from "../LargeCard";
+import DivideCheck from "../DivideCheck";
 
 export default function DynamicIsland() {
   const [dataMode, setDataMode] = useState<string | null>(null);
-  // const [showExpandedItems, setShowExpandedItems] = useState<boolean>(false);
 
   const handleDataMode = (event: React.MouseEvent<HTMLButtonElement>) => {
     const dataMode = event.currentTarget.getAttribute("data-mode");
@@ -43,8 +45,8 @@ export default function DynamicIsland() {
           </button>
         </li>
       </ul>
-      <div className="island" aria-label="Dynamic island" data-mode={dataMode}>
-        <div className="expanded_container" data-mode="expanded">
+      <div className="island" aria-label="navigation menu" data-mode={dataMode}>
+        <div className="expanded_container" data-mode={dataMode}>
           <div className="expanded_items">
             <Phone />
           </div>
@@ -53,6 +55,9 @@ export default function DynamicIsland() {
           </nav>
           <div className="expanded_items">
             <Add />
+          </div>
+          <div className="divide_component">
+            <DivideCheck />
           </div>
         </div>
         <div className="island__container" data-mode={dataMode}>
