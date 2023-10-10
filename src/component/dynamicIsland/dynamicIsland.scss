@@ -1,4 +1,10 @@
 $transition_duration: 300ms;
+@mixin island-borders {
+  border-radius: 3rem;
+  box-shadow: 0 0 0.5rem var(--secondary);
+  border: 0.5px solid var(--accent);
+  background-color: var(--background);
+}
 
 .header {
   position: fixed;
@@ -18,10 +24,7 @@ $transition_duration: 300ms;
   gap: 1rem;
   padding: 1rem;
   margin: 1rem auto;
-  border-radius: 3rem;
-  box-shadow: 0 0 0.5rem var(--secondary);
-  border: 0.5px solid var(--accent);
-  background-color: var(--background);
+  @include island-borders;
   color: var(--text);
   transition: all $transition_duration ease;
 
@@ -76,13 +79,10 @@ $transition_duration: 300ms;
   .divide_component {
     display: grid;
     place-items: center;
-    padding: 1rem;
+    padding: 0.9rem;
     max-width: 5rem;
     max-height: 5rem;
-    border-radius: 50%;
-    box-shadow: 0 0 0.5rem var(--secondary);
-    border: 0.5px solid var(--accent);
-    background-color: var(--background);
+    @include island-borders;
     position: absolute;
     opacity: 0;
     transition: opacity 100ms, transform 400ms;
@@ -108,7 +108,7 @@ $transition_duration: 300ms;
 .island[data-mode="divide"] {
   // transition: all 350ms ease;
   .divide_component {
-    transform: translateX(8rem);
+    transform: translateX(7rem);
     opacity: 1;
   }
 }
