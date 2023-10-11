@@ -1,14 +1,16 @@
 // import { useEffect } from "react";
 import Card from "./Cards";
 
+import { AppContext } from "../context/AppContext";
+import { useContext } from "react";
+
 export default function CardsContainer() {
+  const { state } = useContext(AppContext);
   return (
     <div className="card_container">
-      <Card
-        title="Add this item to the cart to see what happens"
-        image="/cover-img.webp"
-        text="The animation is almost identical to the one that you can find on the iPhones, looks great on any website."
-      />
+      {state.data.map((card) => (
+        <Card title={card.title} image={card.image} text={card.text} />
+      ))}
     </div>
   );
 }

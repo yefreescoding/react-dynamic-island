@@ -3,14 +3,18 @@ import Body from "./component/Body";
 import "./app.scss";
 import CardsContainer from "./component/CardsContainer";
 
+import { AppProvider } from "./context/AppContext";
+
 function App() {
   return (
-    <div className="wrapper">
-      <DynamicIsland />
-      <Body>
-        <CardsContainer />
-      </Body>
-    </div>
+    <AppProvider>
+      <div className="wrapper">
+        <DynamicIsland />
+        <Body>
+          <CardsContainer />
+        </Body>
+      </div>
+    </AppProvider>
   );
 }
 
