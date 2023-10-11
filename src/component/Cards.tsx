@@ -11,12 +11,12 @@ export default function Card({ title, image, text }: CardProps) {
         <img src={image} alt="" />
       </div>
       <div className="content">
-        <span className="title">{title}</span>
+        <h3 className="title">{title}</h3>
         <p className="desc">{text}</p>
-        <span className="action">
+        <button type="button" className="action">
           Add to cart
           <span aria-hidden="true">→</span>
-        </span>
+        </button>
       </div>
     </article>
   );

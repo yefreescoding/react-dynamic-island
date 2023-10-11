@@ -1,7 +1,10 @@
-import Card from "./Cards";
 import InputEmail from "./InputEmail";
 
-export default function Body() {
+interface BodyProps {
+  children: React.ReactNode;
+}
+
+export default function Body({ children }: BodyProps) {
   return (
     <main className="main">
       <section className="section cover">
@@ -37,13 +40,7 @@ export default function Body() {
             you want to add it to. Feel free to modify the code to your needs.
           </p>
         </div>
-        <div className="card_container">
-          <Card
-            title="Add this item to the cart to see what happens"
-            image="/"
-            text="The animation is almost identiacal to the one that you can find on the iPhones, looks great on any website."
-          />
-        </div>
+        {children}
       </section>
     </main>
   );
