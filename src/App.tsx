@@ -1,4 +1,3 @@
-import DynamicIsland from "./component/dynamicIsland/DynamicIsland";
 import Body from "./component/Body";
 import "./app.scss";
 
@@ -8,7 +7,6 @@ function App() {
   return (
     <AppProvider>
       <div className="wrapper">
-        <DynamicIsland />
         <Body />
       </div>
     </AppProvider>

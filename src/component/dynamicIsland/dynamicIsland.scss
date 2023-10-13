@@ -7,7 +7,7 @@ $transition_duration: 300ms;
 }
 
 .header {
-  position: fixed;
+  position: sticky;
   inset: 0.5rem 0 auto 0;
   z-index: 9999;
   margin-inline: auto;

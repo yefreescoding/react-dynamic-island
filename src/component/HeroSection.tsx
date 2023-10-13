@@ -1,9 +1,11 @@
+import DynamicIsland from "./dynamicIsland/DynamicIsland";
 import InputEmail from "./InputEmail";
 
 export default function Body() {
   return (
     <>
       <section className="section cover">
+        <DynamicIsland />
         <div className="text">
           <h1 className="cover__h1">IOS DYNAMIC ISLAND WITH REACT</h1>
           <p>
@@ -22,10 +24,10 @@ export default function Body() {
           </div>
           <p>No spam, I promise.</p>
         </form>
+        <div className="cover_img">
+          <img src="/cover-img.webp" alt="" />
+        </div>
       </section>
-      <div className="cover_img">
-        <img src="/cover-img.webp" alt="" />
-      </div>
     </>
   );
 }

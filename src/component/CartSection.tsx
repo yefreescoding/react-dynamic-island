@@ -1,8 +1,10 @@
 import CardsContainer from "./CardsContainer";
+import DynamicIsland from "./dynamicIsland/DynamicIsland";
 
 export default function CartSection() {
   return (
-    <section className="section">
+    <section className="section cart">
+      <DynamicIsland />
       <div className="text">
         <h2>The same animations, functionality, and design as the original.</h2>
         <p>
