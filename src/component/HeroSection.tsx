@@ -1,11 +1,42 @@
+import { useState } from "react";
+// Dynamic Island imports
 import DynamicIsland from "./dynamicIsland/DynamicIsland";
+import ExpandedContainer from "./dynamicIsland/ExpandedContainer";
+import IslandContainer from "./dynamicIsland/IslandContainer";
+
+// icon imports
+import { Add, Phone } from "./icons/icons";
+
+// component imports
 import InputEmail from "./InputEmail";
+import SquareMenu from "./SquareMenu";
+import LarCard from "./LargeCard";
 
 export default function Body() {
+  const [dataMode, setDataMode] = useState<string | null>("");
+
+  const handleDataMode = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const actualDataMode = event.currentTarget.getAttribute("data-mode");
+    setDataMode(actualDataMode);
+  };
+
   return (
     <>
       <section className="section cover">
-        <DynamicIsland />
+        <DynamicIsland handleDataMode={handleDataMode} dataMode={dataMode}>
+          <>
+            <ExpandedContainer
+              dataMode={dataMode}
+              itemLeft={<Phone />}
+              itemRight={<Add />}
+            />
+            <IslandContainer
+              dataMode={dataMode}
+              squareMenuItem={<SquareMenu />}
+              LargeMenuItem={<LarCard />}
+            />
+          </>
+        </DynamicIsland>
         <div className="text">
           <h1 className="cover__h1">IOS DYNAMIC ISLAND WITH REACT</h1>
           <p>

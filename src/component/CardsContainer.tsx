@@ -9,7 +9,12 @@ export default function CardsContainer() {
   return (
     <div className="card_container">
       {state.data.map((card) => (
-        <Card title={card.title} image={card.image} text={card.text} />
+        <Card
+          key={card.id}
+          title={card.title}
+          image={card.image}
+          text={card.text}
+        />
       ))}
     </div>
   );

@@ -1,16 +1,19 @@
 // Component imports
-import SquareMenu from "../SquareMenu";
-import LargeCard from "../LargeCard";
-
 interface IslandContainerProps {
   dataMode: string | null;
+  squareMenuItem: React.ReactNode;
+  LargeMenuItem: React.ReactNode;
 }
 
-export default function IslandContainer({ dataMode }: IslandContainerProps) {
+export default function IslandContainer({
+  dataMode,
+  squareMenuItem,
+  LargeMenuItem,
+}: IslandContainerProps) {
   return (
     <div className="island__container" data-mode={dataMode}>
-      {dataMode === "square" && <SquareMenu />}
-      {dataMode === "large" && <LargeCard />}
+      {dataMode === "square" && squareMenuItem}
+      {dataMode === "large" && LargeMenuItem}
     </div>
   );
 }

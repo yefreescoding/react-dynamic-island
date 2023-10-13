@@ -1,19 +1,18 @@
-import { useState } from "react";
 // styles imports
 import "./dynamicIsland.scss";
 // Icon imports
 
-import IslandContainer from "./IslandContainer";
-import ExpandedContainer from "./ExpandedContainer";
+interface DynamicIslandProps {
+  children: React.ReactNode;
+  handleDataMode: React.MouseEventHandler<HTMLButtonElement>;
+  dataMode: string | null;
+}
 
-export default function DynamicIsland() {
-  const [dataMode, setDataMode] = useState<string | null>("");
-
-  const handleDataMode = (event: React.MouseEvent<HTMLButtonElement>) => {
-    const actualDataMode = event.currentTarget.getAttribute("data-mode");
-    setDataMode(actualDataMode);
-  };
-
+export default function DynamicIsland({
+  children,
+  handleDataMode,
+  dataMode,
+}: DynamicIslandProps) {
   return (
     <header className="header">
       <ul className="island__nav_ul">
@@ -44,8 +43,7 @@ export default function DynamicIsland() {
         </li>
       </ul>
       <div className="island" aria-label="navigation menu" data-mode={dataMode}>
-        <ExpandedContainer dataMode={dataMode} />
-        <IslandContainer dataMode={dataMode} />
+        {children}
       </div>
     </header>
   );
