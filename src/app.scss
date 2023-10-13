@@ -154,7 +154,7 @@ input:hover {
   background-color: var(--primary);
   box-shadow: 0 0 4px 0 var(--secondary);
   border: 1px solid transparent;
-  // height: fit-content;
+  height: 100%;
 
   .image {
     object-fit: cover;
