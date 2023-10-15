@@ -130,6 +130,7 @@ $transition_duration: 300ms;
 //   }
 // }
 
+// Create a new state a combination of the two large + square.
 .island[data-mode="square"] {
   flex-direction: column;
   width: min(100%, 20em);

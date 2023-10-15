@@ -18,7 +18,7 @@ import LarCard from "./LargeCard";
 export default function CartSection() {
   const [dataMode, setDataMode] = useState<string | null>("");
 
-  const [cartItemCount, setCartItemCount] = useState<number>(0);
+  const [cartItemCount] = useState<number>(0);
 
   const handleDataMode = (event: React.MouseEvent<HTMLButtonElement>) => {
     const actualDataMode = event.currentTarget.getAttribute("data-mode");
@@ -26,7 +26,7 @@ export default function CartSection() {
   };
   return (
     <section className="section cart">
-      <DynamicIsland handleDataMode={handleDataMode} dataMode={dataMode}>
+      <DynamicIsland dataMode={dataMode}>
         <>
           <ExpandedContainer
             dynamicIslandContent={
