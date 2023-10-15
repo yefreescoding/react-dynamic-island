@@ -1,6 +1,6 @@
 .wrapper {
   padding: 1rem;
-  position: relative;
+  // position: relative;
 }
 
 .main {
@@ -31,6 +31,7 @@
   }
 
   .cover {
+    position: relative;
     &__h1 {
       font-size: clamp(2.5rem, 4vw, 3.5rem);
       font-weight: 900;
@@ -52,6 +53,9 @@
     }
   }
 
+  .cart {
+    position: relative;
+  }
   .cover_img {
     position: relative;
     border-radius: 10px;
@@ -154,7 +158,7 @@ input:hover {
   background-color: var(--primary);
   box-shadow: 0 0 4px 0 var(--secondary);
   border: 1px solid transparent;
-  height: 100%;
+  height: auto;
 
   .image {
     object-fit: cover;
@@ -683,5 +687,18 @@ input:hover {
     -webkit-transform: scale(0.8);
     transform: scale(0.8);
     opacity: 0;
+  }
+}
+
+.cart_navigation_bar {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  gap: 0.5rem;
+
+  button {
+    background-color: transparent;
+    border: none;
+    text-transform: capitalize;
   }
 }

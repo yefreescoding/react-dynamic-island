@@ -16,7 +16,7 @@ $transition_duration: 300ms;
 }
 
 .island {
-  width: min(6rem, fit-content);
+  width: auto;
   height: min(3rem, 5em);
   position: relative;
   display: flex;
@@ -38,21 +38,23 @@ $transition_duration: 300ms;
 
   &__nav_ul {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
     overflow: hidden;
     padding: 1rem;
     transition: all 500ms ease-in-out;
+    overflow-x: scroll;
 
     button {
       text-transform: uppercase;
       border-radius: 50%;
       border: transparent 1px solid;
-      padding: 0.2rem;
       background-color: transparent;
       text-align: center;
+
+      font-size: clamp(0.7rem, 2vw, 1.1rem);
     }
   }
 
@@ -86,6 +88,7 @@ $transition_duration: 300ms;
     position: absolute;
     opacity: 0;
     transition: opacity 100ms, transform 400ms;
+    z-index: -1;
   }
 
   .island__container {
@@ -95,7 +98,7 @@ $transition_duration: 300ms;
 
 // ======== State styles ========
 .island[data-mode="expanded"] {
-  width: fit-content;
+  width: auto;
   .expanded_items {
     transition: all calc($transition_duration - 100ms) ease;
     position: relative;
@@ -108,30 +111,35 @@ $transition_duration: 300ms;
 .island[data-mode="divide"] {
   // transition: all 350ms ease;
   .divide_component {
-    transform: translateX(7rem);
+    z-index: 1;
+    right: -3.5rem;
+    // transform: translateX(4rem);
     opacity: 1;
   }
 }
 
-.island[data-mode="large"] {
-  flex-direction: column;
-  width: min(100%, 40em);
-  height: 20em;
-  aspect-ratio: 9/6;
-  transition: all 350ms ease;
-  .island__container {
-    display: block;
-  }
-}
+// There's a bug in mobile devices that I have to fix, related to the width:
+// .island[data-mode="large"] {
+//   flex-direction: column;
+//   width: min(100%, 30em);
+//   height: 20em;
+//   aspect-ratio: 9/6;
+//   transition: all 350ms ease;
+//   .island__container {
+//     display: block;
+//   }
+// }
 
 .island[data-mode="square"] {
   flex-direction: column;
-  width: min(100%, 18em);
-  height: 18em;
+  width: min(100%, 20em);
+  height: 20em;
+  aspect-ratio: 1;
   border-radius: 2rem;
-  aspect-ratio: 4/4;
   transition: all 350ms ease;
   .island__container {
+    display: grid;
+    place-items: center;
     display: block;
   }
 }
