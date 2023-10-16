@@ -10,7 +10,6 @@ import { Add, Phone } from "./icons/icons";
 // component imports
 import InputEmail from "./InputEmail";
 import SquareMenu from "./SquareMenu";
-import LarCard from "./LargeCard";
 import DivideCheck from "./DivideCheck";
 
 export default function Body() {
@@ -58,10 +57,10 @@ export default function Body() {
                 <li>
                   <button
                     type="button"
-                    data-mode="square"
+                    data-mode="large"
                     onClick={handleDataMode}
                   >
-                    square
+                    large
                   </button>
                 </li>
               </ul>
@@ -71,11 +70,7 @@ export default function Body() {
             itemRight={<Add />}
             itemDivide={<DivideCheck />}
           />
-          <IslandContainer
-            dataMode={dataMode}
-            squareMenuItem={<SquareMenu />}
-            LargeMenuItem={<LarCard />}
-          />
+          <IslandContainer dataMode={dataMode} LargeMenuItem={<SquareMenu />} />
         </>
       </DynamicIsland>
       <div className="text">

@@ -43,7 +43,6 @@ $transition_duration: 300ms;
     justify-content: center;
     gap: 0.5rem;
     overflow: hidden;
-    padding: 1rem;
     transition: all 500ms ease-in-out;
     overflow-x: scroll;
 
@@ -97,6 +96,7 @@ $transition_duration: 300ms;
 }
 
 // ======== State styles ========
+
 .island[data-mode="expanded"] {
   width: auto;
   .expanded_items {
@@ -118,24 +118,11 @@ $transition_duration: 300ms;
   }
 }
 
-// There's a bug in mobile devices that I have to fix, related to the width:
-// .island[data-mode="large"] {
-//   flex-direction: column;
-//   width: min(100%, 30em);
-//   height: 20em;
-//   aspect-ratio: 9/6;
-//   transition: all 350ms ease;
-//   .island__container {
-//     display: block;
-//   }
-// }
-
 // Create a new state a combination of the two large + square.
-.island[data-mode="square"] {
+.island[data-mode="large"] {
   flex-direction: column;
-  width: min(100%, 20em);
-  height: 20em;
-  aspect-ratio: 1;
+  width: min(100%, 30em);
+  height: 15em;
   border-radius: 2rem;
   transition: all 350ms ease;
   .island__container {

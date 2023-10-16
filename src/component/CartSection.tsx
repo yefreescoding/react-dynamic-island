@@ -13,7 +13,6 @@ import { BsCurrencyEuro } from "react-icons/bs";
 import CardsContainer from "./CardsContainer";
 import CartNavigation from "./CartNavigation";
 import SquareMenu from "./SquareMenu";
-import LarCard from "./LargeCard";
 
 export default function CartSection() {
   const [dataMode, setDataMode] = useState<string | null>("");
@@ -41,11 +40,7 @@ export default function CartSection() {
               </>
             }
           />
-          <IslandContainer
-            dataMode={dataMode}
-            squareMenuItem={<SquareMenu />}
-            LargeMenuItem={<LarCard />}
-          />
+          <IslandContainer dataMode={dataMode} LargeMenuItem={<SquareMenu />} />
         </>
       </DynamicIsland>
       <div className="text">

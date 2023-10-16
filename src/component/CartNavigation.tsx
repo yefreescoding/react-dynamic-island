@@ -16,7 +16,7 @@ export default function CartNavigation({
       <button type="button" data-mode="divide" onClick={handleDataMode}>
         total
       </button>
-      <button type="button" data-mode="square" onClick={handleDataMode}>
+      <button type="button" data-mode="large" onClick={handleDataMode}>
         list
       </button>
     </nav>
