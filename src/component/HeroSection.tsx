@@ -5,7 +5,8 @@ import ExpandedContainer from "./dynamicIsland/ExpandedContainer";
 import IslandContainer from "./dynamicIsland/IslandContainer";
 
 // icon imports
-import { Add, Phone } from "./icons/icons";
+import { Phone } from "./icons/icons";
+import { FaLink } from "react-icons/fa";
 
 // component imports
 import InputEmail from "./InputEmail";
@@ -67,7 +68,11 @@ export default function Body() {
             }
             dataMode={dataMode}
             itemLeft={<Phone />}
-            itemRight={<Add />}
+            itemRight={
+              <a href="/">
+                <FaLink />
+              </a>
+            }
             itemDivide={<DivideCheck />}
           />
           <IslandContainer dataMode={dataMode} LargeMenuItem={<SquareMenu />} />
