@@ -11,11 +11,21 @@ type AppState = {
 
 type AppAction = {
   type: string;
-  payload?: undefined; // Include other relevant properties if needed
+  payload?: number; // Include other relevant properties if needed
 };
 
 const AppReducer = (state: AppState, action: AppAction) => {
   switch (action.type) {
+    case "ADD_EXPENSE":
+      return {
+        ...state,
+        items: [...state.data, action.payload],
+      };
+    case "ADD_ITEM_TO_CART":
+      return {
+        ...state,
+        data: state.data.filter((item) => item.id !== action.payload),
+      };
     default:
       return state;
   }

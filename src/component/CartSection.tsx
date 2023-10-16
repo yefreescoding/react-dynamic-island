@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 // Dynamic Island imports
 import DynamicIsland from "./dynamicIsland/DynamicIsland";
@@ -14,10 +14,14 @@ import CardsContainer from "./CardsContainer";
 import CartNavigation from "./CartNavigation";
 import SquareMenu from "./SquareMenu";
 
+import { AppContext } from "../context/AppContext";
+
 export default function CartSection() {
   const [dataMode, setDataMode] = useState<string | null>("");
 
-  const [cartItemCount] = useState<number>(0);
+  // const [cartItemCount] = useState<number>(0);
+
+  const { state } = useContext(AppContext);
 
   const handleDataMode = (event: React.MouseEvent<HTMLButtonElement>) => {
     const actualDataMode = event.currentTarget.getAttribute("data-mode");
@@ -33,7 +37,7 @@ export default function CartSection() {
             }
             dataMode={dataMode}
             itemLeft={<FaShoppingCart />}
-            itemRight={cartItemCount}
+            itemRight={state.data.length}
             itemDivide={
               <>
                 <BsCurrencyEuro />
