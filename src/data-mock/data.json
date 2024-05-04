@@ -22,10 +22,10 @@
         {
           "id": 100563,
           "link": "string",
-          "user": "isadoraturmo",
-          "avatar": "/images/avatar-3.jpg",
+          "user": "saraafrica__",
+          "avatar": "/images/insta-post-7.jpg",
           "postText": "Hoy junto a @alvaro estuvimos geniales.",
-          "postImg": "/images/insta-post-2.jpg"
+          "postImg": "/images/insta-post-7.jpg"
         },
         {
           "id": 100564,
@@ -50,6 +50,14 @@
           "avatar": "/images/post-img.jpg",
           "postText": "Congrats me for my 22 springs on this earth 🌸",
           "postImg": "/images/post-img.jpg"
+        },
+        {
+          "id": 100566,
+          "link": "string",
+          "user": "ximena_painting_",
+          "avatar": "/images/post-img.jpg",
+          "postText": "New Artwork. This is the collection for 2024.",
+          "postImg": "/images/insta-post-4.jpg"
         }
       ],
       "logo": "instagram.svg",
@@ -62,9 +70,9 @@
           "id": 100561,
           "link": "string",
           "user": "mrncst",
-          "avatar": "/images/avatar.jpg",
+          "avatar": "/images/avatar-2.jpg",
           "postText": "What's the best way to unwind on a Thursday night? Me: React components. 😌",
-          "postImg": "/images/twitter-post.jpg"
+          "postImg": "/images/twitter-post-3.jpg"
         },
         {
           "id": 100562,
@@ -85,7 +93,7 @@
           "id": 100564,
           "link": "string",
           "user": "ormanclark",
-          "avatar": "/images/avatar.jpg",
+          "avatar": "/images/avatar-3.jpg",
           "postText": "make a designer cry in 3 words"
         }
       ],
@@ -104,41 +112,18 @@
         {
           "id": 100561,
           "link": "string",
-          "user": "annalenks",
+          "user": "_tucryptobro_",
           "avatar": "/images/avatar.jpg",
-          "postText": "string",
-          "postImg": "/images/avatar.jpg"
-        },
-        {
-          "id": 100562,
-          "link": "string",
-          "user": "abelardo789",
-          "avatar": "/images/avatar.jpg",
-          "postText": "string"
+          "postText": "NEW PEEPHOLE 2024! ALL THAT YOU NEED TO KNOW!",
+          "postImg": "/images/youtube-post.jpg"
         },
         {
           "id": 100563,
           "link": "string",
-          "user": "currito",
+          "user": "evelyn-hugo",
           "avatar": "/images/avatar.jpg",
-          "postText": "string",
-          "postImg": "/images/post-img.jpg"
-        },
-        {
-          "id": 100563,
-          "link": "string",
-          "user": "currito",
-          "avatar": "/images/avatar.jpg",
-          "postText": "string",
-          "postImg": "/images/post-img.jpg"
-        },
-        {
-          "id": 100563,
-          "link": "string",
-          "user": "currito",
-          "avatar": "/images/avatar.jpg",
-          "postText": "string",
-          "postImg": "/images/post-img.jpg"
+          "postText": "Top tendencies for 2024 market",
+          "postImg": "/images/youtube-post-2.jpg"
         }
       ],
       "logo": "youtube.svg",
