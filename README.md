@@ -1,83 +1,47 @@
-# IOS DYNAMIC ISLAND REACT
+# Simple Multiuse React Component
 
-This is a challenge I decided to start working in, and transform it into a React component.
+Welcome to the Simple Multiuse React Component repository! This repository serves as a showcase for a versatile React component built using TypeScript, CSS, and Framer Motion. The component allows you to visualize content within the same component by leveraging TypeScript classes and properties.
 
-## Table of contents
+## Installation
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+To use the Simple Multiuse React Component, follow these steps:
 
-## Overview
+1. Clone or download this repository to your local machine.
 
-### The challenge
+2. Navigate to the root directory of the repository in your terminal.
 
-Take the functionality, animations, and "magic" of the iPhone 13 Pro, and iPhone 15 series dynamic island and translate it into the web with JavaScript.
+3. Install dependencies using npm or yarn.
 
-### The original reference
+   ```bash
+   pnpm install
+   ```
 
-Normal state:
-![](./screenshot.jpg)
+## Usage
 
-Medium Expanded State:
-![](./screenshot.jpg)
+Once the repository is downloaded and dependencies are installed, you can start using the component.
 
-Big Expanded State:
-![](./screenshot.jpg)
+1. **Run the Development Server**: Start the development server to preview the component.
 
-### Links
+   ```bash
+   pnpm run dev
+   ```
 
-- Solution URL: [GitHub](https://your-solution-url.com)
-- Live Site URL: [Live Site](https://your-live-site-url.com)
+2. **Explore the Component**: Open your browser and navigate to `http://localhost:5173` to view the component in action.
 
-## My process
+3. **Modify the Component**: Feel free to modify the component code in the `src/components` directory to suit your needs. You can also tweak the styles in the `src/styles` directory.
 
-### Built with
+## Features
 
-- Semantic HTML5 markup
-- CSS custom properties
-- SASS
-- [React](https://reactjs.org/) - JS library
+- **Versatile**: Use the component for various purposes within your React applications.
+- **TypeScript Support**: Leverage TypeScript to define classes and properties for the component.
+- **Animation**: Utilize Framer Motion for smooth and interactive animations.
 
-### What I learned
+## Contributing
 
-✏️ Notes
+Contributions to this repository are welcome! Feel free to fork the repository, make changes, and submit pull requests.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+## Support
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+For any questions or support regarding this repository, please create an issue or contact the repository owner.
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-### Continued development
-
-### Useful resources
-
-- [Invisible Details of Interaction Design](https://rauno.me/craft/interaction-design) - This helped me understand how some interactions with our phones or tablets feels so intuitive.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-## Author
-
-- Website - [Yefree](https://www.your-site.com)
-
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-## Acknowledgments
+Thank you for exploring the Simple Multiuse React Component! Enjoy experimenting with the component and integrating it into your projects.
