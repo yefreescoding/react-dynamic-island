@@ -1,13 +1,10 @@
 import Container from "./component/Container";
-import "./app.scss";
-
-import { AppProvider } from "./context/AppContext";
 
 function App() {
   return (
-    <AppProvider>
+    <div className="app_wrapper">
       <Container />
-    </AppProvider>
+    </div>
   );
 }
 

@@ -1,0 +1,148 @@
+{
+  "app": [
+    {
+      "social-media": "Instagram",
+      "posts": [
+        {
+          "id": 100561,
+          "link": "string",
+          "user": "genoafitness",
+          "avatar": "/images/avatar-2.jpg",
+          "postText": "Another day another lift. Never miss a day!",
+          "postImg": "/images/insta-post-2.jpg"
+        },
+        {
+          "id": 100562,
+          "link": "string",
+          "user": "yogajuanna",
+          "avatar": "/images/avatar.jpg",
+          "postText": "New 2h yoga class on my yt channel",
+          "postImg": "/images/insta-post-3.jpg"
+        },
+        {
+          "id": 100563,
+          "link": "string",
+          "user": "isadoraturmo",
+          "avatar": "/images/avatar-3.jpg",
+          "postText": "Hoy junto a @alvaro estuvimos geniales.",
+          "postImg": "/images/insta-post-2.jpg"
+        },
+        {
+          "id": 100564,
+          "link": "string",
+          "user": "annalenks",
+          "avatar": "/images/post-img.jpg",
+          "postText": "Year in review",
+          "postImg": "/images/insta-post-5.jpg"
+        },
+        {
+          "id": 100565,
+          "link": "string",
+          "user": "bornchampion-89",
+          "avatar": "/images/avatar.jpg",
+          "postText": "2 more weeks for the fight. I'm ready right now!",
+          "postImg": "/images/insta-post-6.jpg"
+        },
+        {
+          "id": 100566,
+          "link": "string",
+          "user": "annalenks",
+          "avatar": "/images/post-img.jpg",
+          "postText": "Congrats me for my 22 springs on this earth 🌸",
+          "postImg": "/images/post-img.jpg"
+        }
+      ],
+      "logo": "instagram.svg",
+      "colors": ["", ""]
+    },
+    {
+      "social-media": "twitter",
+      "posts": [
+        {
+          "id": 100561,
+          "link": "string",
+          "user": "mrncst",
+          "avatar": "/images/avatar.jpg",
+          "postText": "What's the best way to unwind on a Thursday night? Me: React components. 😌",
+          "postImg": "/images/twitter-post.jpg"
+        },
+        {
+          "id": 100562,
+          "link": "string",
+          "user": "marypivdev",
+          "avatar": "/images/avatar.jpg",
+          "postText": "¿Ustedes usan linkedIn? ¿Han encontrado trabajo por este medio? 👀👩🏻‍💻🧑🏻‍💻"
+        },
+        {
+          "id": 100563,
+          "link": "string",
+          "user": "abelardo789",
+          "avatar": "/images/avatar.jpg",
+          "postText": "The craziest glow up in tech history",
+          "postImg": "/images/twitter-post-2.jpeg"
+        },
+        {
+          "id": 100564,
+          "link": "string",
+          "user": "ormanclark",
+          "avatar": "/images/avatar.jpg",
+          "postText": "make a designer cry in 3 words"
+        }
+      ],
+      "logo": "twitter.svg",
+      "colors": ["", ""]
+    },
+    {
+      "social-media": "linkedin",
+      "posts": [],
+      "logo": "linkedin.svg",
+      "colors": ["", ""]
+    },
+    {
+      "social-media": "youtube",
+      "posts": [
+        {
+          "id": 100561,
+          "link": "string",
+          "user": "annalenks",
+          "avatar": "/images/avatar.jpg",
+          "postText": "string",
+          "postImg": "/images/avatar.jpg"
+        },
+        {
+          "id": 100562,
+          "link": "string",
+          "user": "abelardo789",
+          "avatar": "/images/avatar.jpg",
+          "postText": "string"
+        },
+        {
+          "id": 100563,
+          "link": "string",
+          "user": "currito",
+          "avatar": "/images/avatar.jpg",
+          "postText": "string",
+          "postImg": "/images/post-img.jpg"
+        },
+        {
+          "id": 100563,
+          "link": "string",
+          "user": "currito",
+          "avatar": "/images/avatar.jpg",
+          "postText": "string",
+          "postImg": "/images/post-img.jpg"
+        },
+        {
+          "id": 100563,
+          "link": "string",
+          "user": "currito",
+          "avatar": "/images/avatar.jpg",
+          "postText": "string",
+          "postImg": "/images/post-img.jpg"
+        }
+      ],
+      "logo": "youtube.svg",
+      "colors": ["", ""]
+    }
+  ]
+}
