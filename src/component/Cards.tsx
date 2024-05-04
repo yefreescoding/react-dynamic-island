@@ -1,12 +1,13 @@
 import { motion, AnimatePresence } from "framer-motion";
 
-import { useState } from "react";
 import Posts from "./Posts";
+import CardHeader from "./CardHeader";
+import { useState } from "react";
 
 interface CardProps {
-  state: number;
+  modeState: number;
   notifications: number;
-  setContainerState: React.Dispatch<React.SetStateAction<number>>;
+  setContainerState: (payload: number) => void;
   logo: string;
   posts: {
     id: number;
@@ -16,14 +17,18 @@ interface CardProps {
     postText: string;
     postImg?: string | undefined;
   }[];
+  onChange: () => void;
+  setOpenStateFalse: () => void;
+  dataMode: boolean;
 }
 
 export default function Card({
-  state,
-  setContainerState,
+  modeState,
   notifications,
   posts,
   logo,
+  onChange,
+  setOpenStateFalse,
 }: CardProps) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -34,33 +39,21 @@ export default function Card({
       transition={{ duration: 0.1 }}
       data-open={isOpen}
     >
-      <div
-        className="card__header"
-        data-state={state}
-        onClick={() => {
-          if (state === 1) {
-            setContainerState(2);
-            setIsOpen(true);
-          } else {
-            setContainerState(1);
-            setIsOpen(false);
-          }
-        }}
-      >
-        <img src={`/icons/${logo}`} alt="" />
-        {notifications > 0 && (
-          <div className="card__notification" data-state={state}>
-            <span>{notifications}</span>
-            {state === 2 && <p>Posts</p>}
-          </div>
-        )}
-      </div>
+      <CardHeader
+        setIsOpen={setIsOpen}
+        setOpenStateFalse={setOpenStateFalse}
+        modeState={modeState}
+        logo={logo}
+        notifications={notifications}
+        setOpenState={setOpenStateFalse}
+        dataMode={isOpen}
+      />
       <motion.div
         className="card__body"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        data-state={state}
+        data-state={modeState}
       >
         <AnimatePresence>
           {isOpen ? (
@@ -90,13 +83,16 @@ export default function Card({
               {notifications < 1 ? (
                 <h2>There's not new posts</h2>
               ) : (
-                <div
-                  onClick={() => {
-                    setIsOpen(!isOpen);
-                  }}
-                >
-                  <h2>There's {notifications} new posts</h2>
-                  <p>Click here to see the content</p>
+                <div>
+                  <h2>{notifications} are waiting new posts</h2>
+                  <button
+                    onClick={() => {
+                      onChange();
+                      setIsOpen(!isOpen);
+                    }}
+                  >
+                    Click here to see the content
+                  </button>
                 </div>
               )}
             </div>

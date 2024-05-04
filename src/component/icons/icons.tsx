@@ -15,24 +15,47 @@ export const Instagram = () => {
   );
 };
 
-export const Phone = () => {
+export const Expand = () => {
+  return (
+    <svg
+      width="22px"
+      height="22px"
+      strokeWidth="1.2"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      color="currentColor"
+    >
+      <path
+        d="M8 21H20.4C20.7314 21 21 20.7314 21 20.4V3.6C21 3.26863 20.7314 3 20.4 3H3.6C3.26863 3 3 3.26863 3 3.6V16"
+        stroke="currentColor"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></path>
+      <path
+        d="M3.5 20.5L12 12M12 12V16M12 12H8"
+        stroke="currentColor"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></path>
+    </svg>
+  );
+};
+export const Close = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
       width="24px"
       height="24px"
-      fill="none"
-      strokeWidth="1.5"
-      viewBox="0 0 24 24"
       color="currentColor"
     >
       <path
         stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M18.118 14.702 14 15.5c-2.782-1.396-4.5-3-5.5-5.5l.77-4.13L7.815 2H4.064c-1.128 0-2.016.932-1.847 2.047.42 2.783 1.66 7.83 5.283 11.453 3.805 3.805 9.286 5.456 12.302 6.113 1.165.253 2.198-.655 2.198-1.848v-3.584l-3.882-1.479Z"
-      ></path>
+        d="M 20.248047 2.984375 A 0.750075 0.750075 0 0 0 19.724609 3.2148438 L 12 10.939453 L 4.2753906 3.2148438 A 0.750075 0.750075 0 0 0 3.7363281 2.9882812 A 0.750075 0.750075 0 0 0 3.2148438 4.2753906 L 10.939453 12 L 3.2246094 19.714844 A 0.750075 0.750075 0 1 0 4.2851562 20.775391 L 12 13.060547 L 19.716797 20.779297 A 0.75130096 0.75130096 0 1 0 20.779297 19.716797 L 13.060547 12 L 20.785156 4.2753906 A 0.750075 0.750075 0 0 0 20.248047 2.984375 z"
+      />
     </svg>
   );
 };

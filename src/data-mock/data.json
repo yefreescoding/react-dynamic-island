@@ -52,7 +52,7 @@
           "postImg": "/images/post-img.jpg"
         },
         {
-          "id": 100566,
+          "id": 100567,
           "link": "string",
           "user": "ximena_painting_",
           "avatar": "/images/post-img.jpg",
@@ -61,7 +61,7 @@
         }
       ],
       "logo": "instagram.svg",
-      "colors": ["", ""]
+      "colors": ["#833AB4", "#405DE6"]
     },
     {
       "social-media": "twitter",
@@ -98,13 +98,13 @@
         }
       ],
       "logo": "twitter.svg",
-      "colors": ["", ""]
+      "colors": ["#059DFA", "#001B2C"]
     },
     {
       "social-media": "linkedin",
       "posts": [],
       "logo": "linkedin.svg",
-      "colors": ["", ""]
+      "colors": ["#2878E6", "#F0F3F7"]
     },
     {
       "social-media": "youtube",
@@ -127,7 +127,7 @@
         }
       ],
       "logo": "youtube.svg",
-      "colors": ["", ""]
+      "colors": ["#FF0000", "#FFFFFF"]
     }
   ]
 }
