@@ -59,11 +59,12 @@ export default function Card({
           {isOpen ? (
             <motion.div
               className="card__posts"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 50 }}
               transition={{
-                duration: 0.8,
+                delay: 0.3,
+                duration: 0.5,
                 type: "just",
               }}
             >
@@ -77,21 +78,35 @@ export default function Card({
                   postImg={post.postImg}
                 />
               ))}
+
+              <p
+                style={{
+                  marginBlock: "2rem",
+                }}
+              >
+                You saw all the post. Congrats!
+              </p>
             </motion.div>
           ) : (
             <div className="posts_msg">
               {notifications < 1 ? (
-                <h2>There's not new posts</h2>
+                <h2
+                  style={{
+                    opacity: 0.5,
+                  }}
+                >
+                  There's not new posts
+                </h2>
               ) : (
                 <div>
-                  <h2>{notifications} are waiting new posts</h2>
+                  <h2>{notifications} new posts are waiting for you</h2>
                   <button
                     onClick={() => {
                       onChange();
                       setIsOpen(!isOpen);
                     }}
                   >
-                    Click here to see the content
+                    Click to see the content
                   </button>
                 </div>
               )}

@@ -1,5 +1,3 @@
-import { Close, Expand } from "./icons/icons";
-
 const img = "/images/avatar.jpg";
 const userName = "Yefree Valdez";
 const userAccount = "yefree_web_dev";
@@ -28,7 +26,25 @@ export default function Header({ state, setContainerState }: HeaderProps) {
           }
         }}
       >
-        {state === 1 ? <Expand /> : <Close />}
+        {state === 1 ? (
+          <div
+            style={{
+              width: "15px",
+              height: "15px",
+              backgroundColor: "#009f00",
+              borderRadius: "1rem",
+            }}
+          ></div>
+        ) : (
+          <div
+            style={{
+              width: "15px",
+              height: "15px",
+              backgroundColor: "#ff4800",
+              borderRadius: "1rem",
+            }}
+          ></div>
+        )}
       </button>
     </header>
   );
